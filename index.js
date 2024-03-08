@@ -29,7 +29,7 @@ app.post('/checkResult', upload.single('symbol_number'), async(req, res) => {
         const newdata=new FormData()
         newdata.append('symbol_number',symbolNumber)
         
-        let result=await axios.post(process.env.url,newdata)
+        let result=await axios.post(https://onlinenameregistration.nepalpharmacycouncil.org.np/result,newdata)
         // console.log(result.data);
         res.status(200).json(result.data);
 
