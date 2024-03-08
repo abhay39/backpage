@@ -16,6 +16,11 @@ app.use(cors());
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+
+app.get("/",(req,res)=>{
+    res.send("Backpage running!!")
+})
+
 // Define a route to handle the form data
 app.post('/checkResult', upload.single('symbol_number'), async(req, res) => {
     try {
